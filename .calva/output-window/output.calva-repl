@@ -1,0 +1,211 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"0.8.3"},cider/cider-nrepl {:mvn/version,"0.26.0"},cider/piggieback {:mvn/version,"0.5.2"}}}' -A:fig -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware cider.piggieback/wrap-cljs-repl]"
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS: 
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉>  ; Use `alt+enter` to evaluate
+; Creating cljs repl session...
+; Connecting cljs repl: deps.edn + Figwheel Main...
+;   The Calva Connection Log might have more connection progress information.
+; Starting cljs repl for: deps.edn + Figwheel Main...
+; CLJS REPL ready to connect. Please, start your ClojureScript app.
+;   Open the app on this URL: http://localhost:9500
+;   The CLJS REPL will connect when your app is running.
+; Cljs builds started
+; Connected session: cljs, repl: dev
+; TIPS: You can choose which REPL to use (clj or cljs):
+;    *Calva: Toggle REPL connection*
+;    (There is a button in the status bar for this)
+; Jack-in done.
+clj꞉cljs.user꞉> 
+#'cljs.learn/multiply
+
+cljs꞉cljs.learn꞉>  ; Use `alt+enter` to evaluate
+[Figwheel] Compiling build dev to "target/public/cljs-out/dev-main.js"
+[Figwheel] Failed to compile build dev in 0.391 seconds.
+[Figwheel:WARNING] Could not Analyze: Invalid :refer, var cljs.learn/multiply does not exist in file test/cljs/learn_test.cljs  test/cljs/learn_test.cljs   
+[Figwheel:SEVERE] clojure.lang.ExceptionInfo: Invalid :refer, var cljs.learn/multiply does not exist in file test/cljs/learn_test.cljs
+[Figwheel] Compiling build dev to "target/public/cljs-out/dev-main.js"
+[Figwheel:WARNING] Compile Warning   src/cljs/learn.cljs   line:45  column:17
+
+  Use of undeclared Var cljs.learn/app-state
+
+  40  (defn get-app-element []
+  41    (gdom/getElement "app"))
+  42  
+  43  (defn hello-world []
+  44    [:div
+  45     [:h1 (:text @app-state)]
+                      ^---
+  46     [:h3 "Edit this in src/cljs/learn.cljs and watch it change!"]])
+  47  
+  48  (defn mount [el]
+  49    (rdom/render [component-panel] el))
+  50  
+
+[Figwheel] Failed to compile build dev in 0.449 seconds.
+[Figwheel:WARNING] Could not Analyze: Invalid :refer, var cljs.learn/multiply does not exist in file test/cljs/learn_test.cljs  test/cljs/learn_test.cljs   
+[Figwheel:SEVERE] clojure.lang.ExceptionInfo: Invalid :refer, var cljs.learn/multiply does not exist in file test/cljs/learn_test.cljs
+[Figwheel] Compiling build dev to "target/public/cljs-out/dev-main.js"
+[Figwheel] Failed to compile build dev in 0.2 seconds.
+[Figwheel:WARNING] Could not Analyze: Invalid :refer, var cljs.learn/multiply does not exist in file test/cljs/learn_test.cljs  test/cljs/learn_test.cljs   
+[Figwheel:SEVERE] clojure.lang.ExceptionInfo: Invalid :refer, var cljs.learn/multiply does not exist in file test/cljs/learn_test.cljs
+[Figwheel] Compiling build dev to "target/public/cljs-out/dev-main.js"
+[Figwheel:WARNING] Compile Warning   src/cljs/learn.cljs   line:10  column:5
+
+  Use of undeclared Var cljs.learn/greeting
+
+   5     [reagent.dom :as rdom]))
+   6  
+   7  
+   8  (defn component-panel []
+   9    [:div
+  10     [greeting "Hello1"]
+          ^---
+  11     [counting-button "Hello2"]
+  12     [canvas]])
+  13  
+  14  ;; define your app data so that it doesn't get over-written on reload
+  15  ;; (defonce app-state (atom {:text "Hello world!"}))
+
+[Figwheel:WARNING] Compile Warning   src/cljs/learn.cljs   line:11  column:5
+
+  Use of undeclared Var cljs.learn/counting-button
+
+   6  
+   7  
+   8  (defn component-panel []
+   9    [:div
+  10     [greeting "Hello1"]
+  11     [counting-button "Hello2"]
+          ^---
+  12     [canvas]])
+  13  
+  14  ;; define your app data so that it doesn't get over-written on reload
+  15  ;; (defonce app-state (atom {:text "Hello world!"}))
+  16  
+
+[Figwheel:WARNING] Compile Warning   src/cljs/learn.cljs   line:12  column:5
+
+  Use of undeclared Var cljs.learn/canvas
+
+   7  
+   8  (defn component-panel []
+   9    [:div
+  10     [greeting "Hello1"]
+  11     [counting-button "Hello2"]
+  12     [canvas]])
+          ^---
+  13  
+  14  ;; define your app data so that it doesn't get over-written on reload
+  15  ;; (defonce app-state (atom {:text "Hello world!"}))
+  16  
+  17  (defn get-app-element []
+
+[Figwheel] Failed to compile build dev in 0.211 seconds.
+[Figwheel:WARNING] Could not Analyze: Invalid :refer, var cljs.learn/multiply does not exist in file test/cljs/learn_test.cljs  test/cljs/learn_test.cljs   
+[Figwheel:SEVERE] clojure.lang.ExceptionInfo: Invalid :refer, var cljs.learn/multiply does not exist in file test/cljs/learn_test.cljs
+[Figwheel] Compiling build dev to "target/public/cljs-out/dev-main.js"
+[Figwheel] Failed to compile build dev in 0.258 seconds.
+[Figwheel:WARNING] Could not Analyze: Invalid :refer, var cljs.learn/multiply does not exist in file test/cljs/learn_test.cljs  test/cljs/learn_test.cljs   
+[Figwheel:SEVERE] clojure.lang.ExceptionInfo: Invalid :refer, var cljs.learn/multiply does not exist in file test/cljs/learn_test.cljs
+[Figwheel] Compiling build dev to "target/public/cljs-out/dev-main.js"
+[Figwheel:WARNING] Compile Warning   src/cljs/learn.cljs   line:10  column:5
+
+  Use of undeclared Var cljs.learn/greeting
+
+   5     [reagent.dom :as rdom]))
+   6  
+   7  
+   8  (defn component-panel []
+   9    [:div
+  10     [greeting "Hello1"]
+          ^---
+  11     [counting-button "Hello2"]
+  12     [canvas]])
+  13  
+  14  ;; define your app data so that it doesn't get over-written on reload
+  15  ;; (defonce app-state (atom {:text "Hello world!"}))
+
+[Figwheel:WARNING] Compile Warning   src/cljs/learn.cljs   line:11  column:5
+
+  Use of undeclared Var cljs.learn/counting-button
+
+   6  
+   7  
+   8  (defn component-panel []
+   9    [:div
+  10     [greeting "Hello1"]
+  11     [counting-button "Hello2"]
+          ^---
+  12     [canvas]])
+  13  
+  14  ;; define your app data so that it doesn't get over-written on reload
+  15  ;; (defonce app-state (atom {:text "Hello world!"}))
+  16  
+
+[Figwheel:WARNING] Compile Warning   src/cljs/learn.cljs   line:12  column:5
+
+  Use of undeclared Var cljs.learn/canvas
+
+   7  
+   8  (defn component-panel []
+   9    [:div
+  10     [greeting "Hello1"]
+  11     [counting-button "Hello2"]
+  12     [canvas]])
+          ^---
+  13  
+  14  ;; define your app data so that it doesn't get over-written on reload
+  15  ;; (defonce app-state (atom {:text "Hello world!"}))
+  16  
+  17  (defn get-app-element []
+
+[Figwheel] Failed to compile build dev in 0.208 seconds.
+[Figwheel:WARNING] Could not Analyze: Invalid :refer, var cljs.learn/multiply does not exist in file test/cljs/learn_test.cljs  test/cljs/learn_test.cljs   
+[Figwheel:SEVERE] clojure.lang.ExceptionInfo: Invalid :refer, var cljs.learn/multiply does not exist in file test/cljs/learn_test.cljs
+[Figwheel] Compiling build dev to "target/public/cljs-out/dev-main.js"
+[Figwheel] Failed to compile build dev in 0.121 seconds.
+[Figwheel:WARNING] Could not Analyze: Invalid :refer, var cljs.learn/multiply does not exist in file test/cljs/learn_test.cljs  test/cljs/learn_test.cljs   
+[Figwheel:SEVERE] clojure.lang.ExceptionInfo: Invalid :refer, var cljs.learn/multiply does not exist in file test/cljs/learn_test.cljs
+[Figwheel] Compiling build dev to "target/public/cljs-out/dev-main.js"
+[Figwheel:WARNING] Compile Warning   src/cljs/learn.cljs   line:19  column:17
+
+  Use of undeclared Var cljs.learn/component-panel
+
+  14  (defn hello-world []
+  15    [:div
+  16     [:h3 "Edit this in src/cljs/learn.cljs and watch it change!"]])
+  17  
+  18  (defn mount [el]
+  19    (rdom/render [component-panel] el))
+                      ^---
+  20  
+  21  (defn mount-app-element []
+  22    (when-let [el (get-app-element)]
+  23      (mount el)))
+  24  
+
+[Figwheel] Failed to compile build dev in 0.162 seconds.
+[Figwheel:WARNING] Could not Analyze: Invalid :refer, var cljs.learn/multiply does not exist in file test/cljs/learn_test.cljs  test/cljs/learn_test.cljs   
+[Figwheel:SEVERE] clojure.lang.ExceptionInfo: Invalid :refer, var cljs.learn/multiply does not exist in file test/cljs/learn_test.cljs
+[Figwheel] Compiling build dev to "target/public/cljs-out/dev-main.js"
+[Figwheel] Failed to compile build dev in 0.193 seconds.
+[Figwheel:WARNING] Could not Analyze: Invalid :refer, var cljs.learn/multiply does not exist in file test/cljs/learn_test.cljs  test/cljs/learn_test.cljs   
+[Figwheel:SEVERE] clojure.lang.ExceptionInfo: Invalid :refer, var cljs.learn/multiply does not exist in file test/cljs/learn_test.cljs
+[Figwheel] Compiling build dev to "target/public/cljs-out/dev-main.js"
+[Figwheel] Failed to compile build dev in 0.227 seconds.
+[Figwheel:WARNING] Could not Analyze: Invalid :refer, var cljs.learn/multiply does not exist in file test/cljs/learn_test.cljs  test/cljs/learn_test.cljs   
+[Figwheel:SEVERE] clojure.lang.ExceptionInfo: Invalid :refer, var cljs.learn/multiply does not exist in file test/cljs/learn_test.cljs
