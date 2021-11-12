@@ -2,18 +2,26 @@
   (:require
    [goog.dom :as gdom]
    [reagent.core :as reagent :refer [atom]]
-   [reagent.dom :as rdom]))
+   [reagent.dom :as rdom]
+   [cljsjs.showdown :as showdown]))
 
 
 ;; define your app data so that it doesn't get over-written on reload
 ;; (defonce app-state (atom {:text "Hello world!"}))
+
+
+(defonce markdown (reagent/atom ""))
 
 (defn get-app-element []
   (gdom/getElement "app"))
 
 (defn hello-world []
   [:div
-   [:h3 "Edit this in src/cljs/learn.cljs and watch it change!"]])
+   [:p (prn-str @markdown)]
+   [:h3 "Markdown Editr"]
+   [:textarea
+    {:on-change #(reset! markdown (-> % .-target .-value))
+     :value @markdown}]])
 
 
 
